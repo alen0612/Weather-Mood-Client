@@ -22,6 +22,7 @@ function PostBar(props) {
   }, []);
 
   const handleSelect = (event) => {
+    console.log(event.value);
     setMood(event.value);
   };
 

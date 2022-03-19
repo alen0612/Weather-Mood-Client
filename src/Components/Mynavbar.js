@@ -12,7 +12,7 @@ function Mynavbar(props) {
     else props.setShowToday(false);
 
     axios
-      .get("https://weathermoodbackend.herokuapp.com/users/auth", {
+      .get("https://weather-mood-server.herokuapp.com/users/auth", {
         headers: { accessToken: localStorage.getItem("accessToken") },
       })
       .then((response) => {

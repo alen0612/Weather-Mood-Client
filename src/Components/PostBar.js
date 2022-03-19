@@ -1,18 +1,7 @@
 import "../App.css";
 import WeatherMood from "./WeatherMood";
-import React, { Fragment, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBoltLightning,
-  faCloud,
-  faQuestionCircle,
-  faSmog,
-  faSnowflake,
-  faSun,
-  faTint,
-} from "@fortawesome/free-solid-svg-icons";
-import Select from "react-select";
 
 function PostBar(props) {
   let today;
@@ -24,7 +13,7 @@ function PostBar(props) {
 
   useEffect(() => {
     axios
-      .get("https://weathermoodbackend.herokuapp.com/posts")
+      .get("https://weather-mood-server.herokuapp.com/posts")
       .then((response) => {
         //console.log(response.data);
         setMoodList(response.data);
@@ -42,7 +31,7 @@ function PostBar(props) {
 
     axios
       .post(
-        "https://weathermoodbackend.herokuapp.com/posts",
+        "https://weather-mood-server.herokuapp.com/posts",
         {
           content: content,
           mood: mood,
@@ -86,7 +75,7 @@ function PostBar(props) {
 
   const deletePost = (ID) => {
     axios
-      .delete(`https://weathermoodbackend.herokuapp.com/posts/${ID}`)
+      .delete(`https://weather-mood-server.herokuapp.com/posts/${ID}`)
       .then(() => {
         console.log("remove the post");
         const newList = moodList;

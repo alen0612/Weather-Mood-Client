@@ -25,7 +25,7 @@ function SignIn(props) {
 
   const onSubmit = (data) => {
     axios
-      .post("https://weathermoodbackend.herokuapp.com/users/signin", data)
+      .post("https://weather-mood-server.herokuapp.com/users/signin", data)
       .then((response) => {
         if (response.data.error) {
           alert(response.data.error);

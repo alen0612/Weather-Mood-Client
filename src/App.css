@@ -425,7 +425,7 @@
 }
 
 .WeatherMoodUser {
-  width: 10%;
+  width: auto;
   display: inline-block;
   color: rgb(179, 177, 177);
   font-style: italic;

@@ -27,6 +27,7 @@ function PostBar(props) {
   };
 
   const postMood = () => {
+    console.log("Get in postMood!");
     if (content === "" || mood === "Mood" || mood === "") return;
     today = new Date();
 

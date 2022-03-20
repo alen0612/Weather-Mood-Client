@@ -30,6 +30,8 @@ function PostBar(props) {
     if (content === "" || mood === "Mood" || mood === "") return;
     today = new Date();
 
+    console.log("Mood selected: " + mood);
+
     axios
       .post(
         "https://weather-mood-server.herokuapp.com/posts",
@@ -98,10 +100,10 @@ function PostBar(props) {
         />*/}
         <select
           className="PostBarMood"
-          defaultValue={"DEFAULT"}
+          defaultValue={"Mood"}
           onChange={handleSelect}
         >
-          <option disabled value="DEFAULT" hidden className="moodSelectDefault">
+          <option disabled value="Mood" hidden className="moodSelectDefault">
             Mood?
           </option>
           <option value="Clear" className="moodSelector">

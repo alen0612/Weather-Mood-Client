@@ -15,7 +15,7 @@ function PostBar(props) {
     axios
       .get("https://weather-mood-server.herokuapp.com/posts")
       .then((response) => {
-        //console.log(response.data);
+        console.log(response);
         setMoodList(response.data);
         //console.log(moodList);
       });

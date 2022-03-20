@@ -6,7 +6,6 @@ import axios from "axios";
 function PostBar(props) {
   let today;
 
-  const [mood, setMood] = useState("");
   const [content, setContent] = useState("");
   const [id, setID] = useState(0);
   const [moodList, setMoodList] = useState([]);
@@ -21,25 +20,15 @@ function PostBar(props) {
       });
   }, []);
 
-  const handleSelect = (event) => {
-    console.log(event.target.value);
-    setMood(event.target.value);
-  };
-
   const postMood = () => {
-    console.log("Get in postMood!");
-    if (content === "" || mood === "Mood" || mood === "") return;
+    if (content === "") return;
     today = new Date();
-
-    console.log("Mood selected: " + mood);
 
     axios
       .post(
         "https://weather-mood-server.herokuapp.com/posts",
         {
           content: content,
-          //mood: mood,
-          mood: "Clear",
           year: today.getFullYear(),
           month: today.getMonth() + 1,
           day: today.getDate(),
@@ -60,7 +49,6 @@ function PostBar(props) {
             ...moodList,
             {
               content: content,
-              mood: mood,
               id: id,
               year: today.getFullYear(),
               month: today.getMonth() + 1,
@@ -72,7 +60,6 @@ function PostBar(props) {
           ]);
 
           setContent("");
-          setMood("");
           setID(id + 1);
         }
       });
@@ -93,40 +80,6 @@ function PostBar(props) {
   return (
     <div className="PostBar">
       <div className="PostBarInput">
-        {/*<Select
-          placeholder={defaultMood.label}
-          options={options}
-          className="PostBarMood"
-          isSearchable={false}
-          onChange={handleSelect}
-        />*/}
-        <select
-          className="PostBarMood"
-          defaultValue={"Mood"}
-          onChange={handleSelect}
-        >
-          <option disabled value="Mood" hidden className="moodSelectDefault">
-            Mood?
-          </option>
-          <option value="Clear" className="moodSelector">
-            Clear
-          </option>
-          <option value="Cloud" className="moodSelector">
-            Cloud
-          </option>
-          <option value="Thunder" className="moodSelector">
-            Thunder
-          </option>
-          <option value="Rain" className="moodSelector">
-            Rain
-          </option>
-          <option value="Mist" className="moodSelector">
-            Mist
-          </option>
-          <option value="Snow" className="moodSelector">
-            Snow
-          </option>
-        </select>
         <textarea
           className="PostBarContent"
           placeholder="What's on your mind?"
@@ -147,7 +100,6 @@ function PostBar(props) {
               username={moodList.username}
               currentUser={props.currentUser}
               content={moodList.content}
-              mood={moodList.mood}
               id={moodList.id}
               year={moodList.year}
               month={moodList.month}

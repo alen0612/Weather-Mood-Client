@@ -363,31 +363,8 @@
   flex-direction: row;
 }
 
-.PostBarMood {
-  width: auto;
-  min-width: 8em;
-  height: 35%;
-  font-size: 1em;
-  outline: none;
-  font-weight: bold;
-  padding-left: 5px;
-}
-
-.moodSelector {
-  font-weight: bold;
-}
-
-.PostBarSelectIcon {
-  padding-right: 5px;
-}
-
-/*.PostBarSelectSpan {
-  padding-left: 10px;
-}*/
-
 .PostBarContent {
-  width: auto;
-  min-width: 60%;
+  width: 70%;
   height: 70%;
   font-size: 1em;
   outline: none;
@@ -441,16 +418,17 @@
   z-index: 10;
   border-radius: 5px;
   font-size: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
 }
 
-.WeatherMoodIcon {
-  display: inline-block;
-  text-align: center;
-  font-size: 2.25em;
+.WeatherMoodUser {
   width: 10%;
-  color: rgb(102, 102, 102);
-  position: relative;
-  top: 20px;
+  display: inline-block;
+  color: rgb(179, 177, 177);
+  font-style: italic;
 }
 
 .WeatherMoodContent {
@@ -480,15 +458,8 @@
   top: 10px;
 }
 
-.WeatherMoodUser {
-  width: 10%;
-  display: inline-block;
-  color: rgb(179, 177, 177);
-  font-style: italic;
-}
-
 .WeatherMoodDelete {
-  width: auto;
+  width: 5%;
   height: auto;
   font-size: 0.5em;
   text-align: center;

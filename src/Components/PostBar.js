@@ -38,7 +38,8 @@ function PostBar(props) {
         "https://weather-mood-server.herokuapp.com/posts",
         {
           content: content,
-          mood: mood,
+          //mood: mood,
+          mood: "Clear",
           year: today.getFullYear(),
           month: today.getMonth() + 1,
           day: today.getDate(),

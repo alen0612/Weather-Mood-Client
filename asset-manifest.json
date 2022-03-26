@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Weather-Mood-Client/static/css/main.92bd8f2b.css",
-    "main.js": "/Weather-Mood-Client/static/js/main.f2bb5ac0.js",
+    "main.js": "/Weather-Mood-Client/static/js/main.b8f968cf.js",
     "static/js/787.86c632f7.chunk.js": "/Weather-Mood-Client/static/js/787.86c632f7.chunk.js",
     "index.html": "/Weather-Mood-Client/index.html",
     "main.92bd8f2b.css.map": "/Weather-Mood-Client/static/css/main.92bd8f2b.css.map",
-    "main.f2bb5ac0.js.map": "/Weather-Mood-Client/static/js/main.f2bb5ac0.js.map",
+    "main.b8f968cf.js.map": "/Weather-Mood-Client/static/js/main.b8f968cf.js.map",
     "787.86c632f7.chunk.js.map": "/Weather-Mood-Client/static/js/787.86c632f7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.92bd8f2b.css",
-    "static/js/main.f2bb5ac0.js"
+    "static/js/main.b8f968cf.js"
   ]
 }

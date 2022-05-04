@@ -90,7 +90,7 @@ function Mynavbar(props) {
                     handleForecastClick();
                 }}
               >
-                Forcast
+                Forecast
               </div>
             </div>
             <div className="navbarRight">
